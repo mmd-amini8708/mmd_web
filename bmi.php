@@ -9,7 +9,7 @@
             max-width: 500px;
             margin-top: 50px;
         }
-        h1 {
+        .h1 {
             color: #0d6efd;
             margin-bottom: 20px;
         }
@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">محاسبه شاخص توده بدنی (BMI)</h1>
+        <h1 class="text-center h1">محاسبه شاخص توده بدنی (BMI)</h1>
         <form id="bmiForm" class="bg-light p-4 rounded shadow">
             <div class="mb-3">
                 <label for="weight" class="form-label">وزن (کیلوگرم):</label>
