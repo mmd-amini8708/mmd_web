@@ -1,7 +1,6 @@
 
-<?php  include("head.html") ?>
+<?php  include("head.php"); ?>
 
-    <?php session_start() ?>
     <!-- Products Section -->
     <div class="container my-5">
         <h2 class="text-center mb-4">محصولات ما</h2>

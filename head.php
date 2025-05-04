@@ -1,0 +1,91 @@
+<?php 
+session_start(); 
+if(isset($_SESSION['Admin']))
+{
+$Admin = $_SESSION['Admin'];
+}
+?>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> باشگاه ایلیا</title>
+    <!-- لینک به Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- برای لینک شدن به صفحه لاگین-->
+    <div class="container text-center mt-5">
+        <button class="login-btn" onclick="window.location.href='signup.html'">
+          <i class="fas fa-sign-in-alt"></i>
+        </button>
+        <p class="mt-3">برای ورود به سایت کلیک کنید.</p>
+      </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="about_me.php">وب‌سایت من</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.php">خانه</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about_us.php">درباره ما</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  خدمات
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="bmi.php">bmi </a></li>
+                  <li><a class="dropdown-item" href="mashins.php"> توضیحات دستگاه ها</a></li>
+                  <li><a class="dropdown-item" href="eat_sleep.php"> خواب و خوراک</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="call_me.html">تماس با ما</a>
+              </li>
+              <li class="nav-item">
+                <?php
+                  if(isset($Admin) && $Admin)
+                  {
+                ?>
+                <a class="nav-link" href="admin.php"> تنظیمات</a>
+                <?php 
+                  }
+                ?>
+
+                  
+              </li>
+              
+            </ul>
+          </div>
+          <?php if(isset($_SESSION['login']) && $_SESSION['login']) { ?>
+            <a class="nav-link right" href="logout.php"> خروج</a>
+            <?php 
+            }else 
+            { ?>
+              <a class="nav-link right" href="login.html"> ورود</a>
+              <?php 
+            } ?>
+        </div>
+      </nav>
+    
+      
+
+
+
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1>iliya gym<h1>
+        <h1>فروشگاه مکمل‌های ورزشی </h1>
+        <p>مکمل‌های مورد نیاز شما برای تناسب اندام و سلامتی</p>
+    </header>

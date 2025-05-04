@@ -1,4 +1,4 @@
-<?php include("head.html") ?>
+<?php include("head.php") ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,6 @@
 </head>
 <body>
     <?php
-        session_start();
         if(isset($_SESSION['login']))
         {
             if($_SESSION['login'] == true)

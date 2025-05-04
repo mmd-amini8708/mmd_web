@@ -18,8 +18,11 @@ if($result===true){
     echo("ذخیره  نشد");
 }
 
-?>
 
+?>
+<script>
+    location.replace('index.php');
+</script>
 <?php
 
 ?>
